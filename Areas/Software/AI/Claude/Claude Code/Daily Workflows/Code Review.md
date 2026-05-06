@@ -1,0 +1,27 @@
+---
+tags: [areas, software, ai, claude, claude-code, daily-workflows]
+author: Santi Tabbach
+created: 2026-05-06
+modified: 2026-05-06
+---
+
+## Review with a Subagent
+
+Before you push a PR, ask Claude to use a **subagent** to review your changes. The subagent runs in its own context window with fresh eyes — it doesn't carry the bias of the main agent that just spent the session writing the code.
+
+When creating a code-reviewer subagent, restrict it to read-only tools. A reviewer should flag issues, not edit files. Check the subagent configuration into your repo so your whole team uses the same reviewer.
+
+## The /commit-push-pr Skill
+
+The `/commit-push-pr` skill handles the commit, push, and PR creation all in one step. Instead of doing each manually, just run the skill and Claude takes care of it.
+
+If you have a Slack MCP server configured with channels listed in your CLAUDE.md, it will automatically post the PR link to your team's channel.
+## Session Linking with --from-pr
+
+When Claude creates a PR through `gh pr create`, the session gets linked to that PR automatically. If you need to come back to it later — maybe to address review comments or fix a failing build — run:
+
+```
+claude --from-pr <PR_NUMBER>
+```
+
+This picks up right where you left off.
