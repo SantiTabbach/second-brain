@@ -8,15 +8,29 @@ created: 2026-05-30
 modified: 2026-05-30
 ---
 ## Index
-1. [[#Readable streams]]
-2. [[#Teeing]]
-3. [[#Writable streams]]
-4. [[#Pipe chains]]
-5. [[#Backpressure]]
-6. [[#Internal queues and queuing strategies]]
+1. [[#Concepts and usage]]
+2. [[#Readable streams]]
+3. [[#Teeing]]
+4. [[#Writable streams]]
+5. [[#Pipe chains]]
+6. [[#Backpressure]]
+7. [[#Internal queues and queuing strategies]]
 
 The [Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects that allow JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.
 
+## Concepts and usage
+
+Streaming involves breaking a resource that you want to receive over a network down into small chunks, then processing it bit by bit. Browsers already do this when receiving media assets — videos buffer and play as more of the content downloads, and sometimes you'll see images display gradually as more is loaded too.
+
+But this capability has never been available to JavaScript before. Previously, if we wanted to process a resource of some kind (video, text file, etc.), we'd have to download the entire file, wait for it to be deserialized into a suitable format, then process all the data.
+
+With the Streams API, you can start processing raw data with JavaScript bit by bit, as soon as it is available, without needing to generate a buffer, string, or blob.
+
+![[Pasted image 20260530120422.png]]
+
+There are more advantages too — you can detect when streams start or end, chain streams together, handle errors and cancel streams as required, and react to the speed at which the stream is being read.
+
+---
 ## Readable streams
 
 A readable stream is a data source represented in JavaScript by [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) object that flows from an **underlying source** - this is a resource somewhere on the network or elsewhere on your domain that you want to get data from.
