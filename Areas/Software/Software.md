@@ -1,8 +1,10 @@
 ---
-tags: [areas, software]
+tags:
+  - areas
+  - software
 author: Santi Tabbach
 created: 2026-04-27
-modified: 2026-05-24
+modified: 2026-05-30
 ---
 
 [[AI]]
@@ -15,3 +17,4 @@ modified: 2026-05-24
 [[Tooling]]
 [[Typescript]]
 [[NodeJS]]
+[[Streaming]]
