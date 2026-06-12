@@ -10,7 +10,7 @@ modified: 2026-06-12
 ---
 ## Index
 
-1. [[WebSockets]]
+1. [[#WebSockets]]
 2. [[#Handshake]]
 3. [[#Default URI Format]]
 4. [[#WebSocket Frames]]
