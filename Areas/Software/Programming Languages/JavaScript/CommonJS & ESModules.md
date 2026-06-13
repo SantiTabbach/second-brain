@@ -1,16 +1,14 @@
 ---
-tags: [areas, software, nodejs]
+tags:
+  - areas
+  - software
+  - programming-languages
+  - javascript
 author: Santi Tabbach
 created: 2026-05-24
-modified: 2026-05-24
+modified: 2026-06-13
 ---
-
-## Índice
-1. [[#CommonJS & ESModules]]
-
-## CommonJS & ESModules
-
-### CommonJS
+## CommonJS
 
 Nace para poder partir el código en diferentes archivos y poder comunicarlos entre si mediante exportación/importación de la siguiente manera:
 
@@ -43,7 +41,7 @@ Esto funciona bien en un servidor porque leer un archivo del disco es rápido. P
 
 ---
 
-### ESModules: el estándar oficial del lenguaje (ES2015/ES6)
+## ESModules: el estándar oficial del lenguaje (ES2015/ES6)
 
 En 2015, el comité TC39 (los que diseñan JavaScript) finalmente agregó un sistema de módulos al lenguaje. No es una librería, no es un invento de Node - es parte de la especificación de javascript:
 

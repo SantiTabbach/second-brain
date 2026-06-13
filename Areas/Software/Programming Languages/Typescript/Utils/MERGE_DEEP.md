@@ -1,5 +1,10 @@
 ---
-tags: [areas, software, typescript, utils]
+tags:
+  - areas
+  - software
+  - typescript
+  - utils
+  - programming-languages
 author: Santi Tabbach
 created: 2026-04-27
 modified: 2026-05-08

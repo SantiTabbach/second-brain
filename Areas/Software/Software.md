@@ -15,6 +15,5 @@ modified: 2026-05-30
 [[Infrastructure]]
 [[N8N]]
 [[Tooling]]
-[[Typescript]]
-[[NodeJS]]
+[[Programming Languages]]
 [[Streaming]]
